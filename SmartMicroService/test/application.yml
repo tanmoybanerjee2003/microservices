@@ -1,0 +1,33 @@
+server:
+    port: 9080
+
+# spring.autoconfigure.exclude = none if elasticsearch is the store
+spring:
+    autoconfigure.exclude: org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataRepositoriesConfiguration
+    jpa:
+        properties.hibernate:
+            generate_statistics: true
+            format_sql: true
+            jdbc.batch_size: 5
+            order_inserts: true
+        show-sql: true
+        hibernate.ddl-auto: none
+    datasource:
+        url: jdbc:postgresql://localhost:5432/postgres?currentSchema=smart_ms
+        driverClassName: org.postgresql.Driver
+        username: user1
+        password: user1
+    data.mongodb.uri: mongodb://localhost:27017/smart_ms
+    data.elasticsearch.cluster-nodes: localhost:9300
+        
+# valid values for app.store.type: rdbms, mongodb, elasticsearch
+app:
+    store:
+        type: rdbms
+        provider: postgres
+    multitenancy:
+        enabled: false
+        default.tenant.id: defaultTenant
+    interface:
+        messaging.enabled: false
+        kafka.enabled: false

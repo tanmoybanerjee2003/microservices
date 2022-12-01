@@ -19,6 +19,14 @@ Repository of SmartMicroService. SmartMicroService can be build and run as follo
 				<td>Docker Desktop</td>
 				<td>Required to build and run Docker image</td>
 			</tr>
+			<tr>
+				<td>Keycloak</td>
+				<td>OIDC auth server</td>
+			</tr>
+			<tr>
+				<td>PostgreSQL</td>
+				<td>RDBMS</td>
+			</tr>
 		</table>
 	</li>
 	<li>Build the project locally

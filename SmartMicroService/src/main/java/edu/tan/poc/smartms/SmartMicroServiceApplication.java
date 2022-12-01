@@ -1,4 +1,4 @@
-package edu.tan.poc.SmartMicroService;
+package edu.tan.poc.smartms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

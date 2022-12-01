@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.tan.poc.SmartMicroService.interfaces.restapi;
+package edu.tan.poc.smartms.interfaces.restapi;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.tan.poc.SmartMicroService.security;
+package edu.tan.poc.smartms.security;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -33,12 +33,12 @@ public class CustomSecurityConfiguration {
 		}
 		
 		httpSecurity
-		.authorizeRequests()
-		.antMatchers("/ping").permitAll()
-		.anyRequest().authenticated().and()
-		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-		.csrf().disable()
-		.oauth2ResourceServer().jwt();
+			.authorizeRequests()
+			.antMatchers("/ping").permitAll()
+			.anyRequest().authenticated().and()
+			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+			.csrf().disable()
+			.oauth2ResourceServer().jwt();
 		
 		return httpSecurity.build();
 	}

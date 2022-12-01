@@ -1,4 +1,4 @@
-# SupplementOrderAutomation
+# SmartMicroService
 Repository of SmartMicroService. SmartMicroService can be build and run as follows:
 <ul>
 	<li>Prerequisites
@@ -29,7 +29,7 @@ Repository of SmartMicroService. SmartMicroService can be build and run as follo
 	</li>
 	<li>Run as standalone micro service
 		<ul>
-			<li>Run the micro service with application properties of your choice e.g. <font color="blue">java -jar SmartMicroService.jar --spring.config.location=test/application.yml</font></li>
+			<li>Run the micro service with application properties of your choice e.g. <font color="blue">java -cp SmartMicroService.jar -Dlogging.config="test/logback.xml" -Dloader.path=test/postgresql-42.5.1.jar org.springframework.boot.loader.PropertiesLauncher --spring.config.location=test/application.yml</font></li>
 		</ul>
 	</li>
 	<li>Run on Docker

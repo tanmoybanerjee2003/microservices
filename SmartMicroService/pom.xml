@@ -37,6 +37,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+		<dependency>
+	      <groupId>org.springframework.boot</groupId>
+	      <artifactId>spring-boot-starter-oauth2-client</artifactId>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.springframework.boot</groupId>
+	      <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+	    </dependency>
 		
 		<!-- REST API -->
 		<dependency>
@@ -131,6 +139,7 @@
 									<includes>
 										<include>test/*.y*ml</include>
 										<include>test/*.xml</include>
+										<include>test/*.jar</include>
 									</includes>
 									<excludes>
 										<exclude>pom.xml</exclude>

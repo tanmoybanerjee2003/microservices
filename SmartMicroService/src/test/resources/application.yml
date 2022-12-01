@@ -20,7 +20,7 @@ spring:
         username: user1
         password: user1
     data.mongodb.uri: mongodb://localhost:27017/smart_ms
-    data.elasticsearch.cluster-nodes: localhost:9300
+    elasticsearch.uris: localhost:9300
         
 # valid values for app.store.type: rdbms, mongodb, elasticsearch
 app:

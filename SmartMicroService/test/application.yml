@@ -1,9 +1,7 @@
 server:
     port: 9080
 
-# spring.autoconfigure.exclude = none if elasticsearch is the store
 spring:
-    autoconfigure.exclude: org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataRepositoriesConfiguration
     security.oauth2.resourceserver.jwt.issuer-uri: http://localhost:18080/auth/realms/default
     jpa:
         properties.hibernate:
@@ -21,7 +19,7 @@ spring:
     data.mongodb.uri: mongodb://localhost:27017/smart_ms
     elasticsearch.uris: localhost:9300
         
-# valid values for app.store.type: rdbms, mongodb, elasticsearch
+# valid values for app.store.type: rdbms, mongodb
 app:
     store:
         type: rdbms

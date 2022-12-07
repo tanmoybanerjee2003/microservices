@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import edu.tan.poc.smartms.error.ValidationException;
 import edu.tan.poc.smartms.error.ValidationFailure;
+import edu.tan.poc.smartms.service.UserService;
 import edu.tan.poc.smartms.validation.Validator;
 import edu.tan.poc.smartms.vo.User;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +31,9 @@ public class APIController {
 	
 	@Autowired
 	private Validator userValidator;
+	
+	@Autowired
+	private UserService userService;
 	
 	@GetMapping(path = "/ping")
 	public String ping() {
@@ -52,6 +56,7 @@ public class APIController {
 			}
 			
 			//save
+			userService.save(user);
 		} else {
 			log.error("Null or empty payload is ignored.");
 		}

@@ -23,5 +23,11 @@ public class AppEventListener {
 		if(isDebugEnabled) {
 			log.debug("Received applicationReadyEvent");
 		}
+		
+		//perform on-startup tasks
+		
+		if(isDebugEnabled) {
+			log.debug("Microservice has been started successfully.");
+		}
 	}
 }

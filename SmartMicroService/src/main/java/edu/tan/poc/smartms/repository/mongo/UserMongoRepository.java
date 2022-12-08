@@ -14,6 +14,6 @@ import edu.tan.poc.smartms.util.CommonConstants;
  *
  */
 @ConditionalOnProperty(name = "app.store.type", havingValue = CommonConstants.STORE_TYPE_MONGODB)
-public interface UserMongoRepository extends MongoRepository<User, String> {
+public interface UserMongoRepository extends MongoRepository<User, Integer> {
 
 }

@@ -15,6 +15,6 @@ import edu.tan.poc.smartms.util.CommonConstants;
  *
  */
 @ConditionalOnProperty(name = "app.store.type", havingValue = CommonConstants.STORE_TYPE_RDBMS)
-public interface UserJpaRepository extends PagingAndSortingRepository<User, String>, JpaSpecificationExecutor<User> {
+public interface UserJpaRepository extends PagingAndSortingRepository<User, Integer>, JpaSpecificationExecutor<User> {
 
 }

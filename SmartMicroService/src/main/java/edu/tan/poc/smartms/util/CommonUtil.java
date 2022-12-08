@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public final class CommonUtil {
+	private CommonUtil() {}
+	
 	/**
 	 * 
 	 * @param str
@@ -19,6 +21,19 @@ public final class CommonUtil {
 	 */
 	public static boolean isEmpty(String str) {
 		return ((str == null) || (str.length() == 0));
+	}
+	
+	/**
+	 * 
+	 * @param obj
+	 * @return integer value of the object
+	 */
+	public static int intValue(Object obj) {
+		if(obj == null) {
+			throw new NumberFormatException("Null string can't be parsed into an integer.");
+		}
+		
+		return Integer.parseInt(obj.toString());
 	}
 	
 	/**
@@ -34,7 +49,7 @@ public final class CommonUtil {
 			user = new User();
 			String userId = userVO.getUserId();
 			if(!isEmpty(userId)) {
-				user.setUserId(Integer.parseInt(userId));
+				user.setUserId(intValue(userId));
 			}
 			user.setFirstName(userVO.getFirstName());
 			user.setMiddleName(userVO.getMiddleName());

@@ -50,3 +50,4 @@ GRANT ALL ON TABLE tbl_tenant TO postgres;
 -- Give required permissions to test user
 GRANT USAGE ON SCHEMA "smart_ms" TO user1;
 GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA "smart_ms" TO user1;
+GRANT SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA "smart_ms" TO user1;

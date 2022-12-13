@@ -43,7 +43,9 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void save(User user) {
 		if(user != null) {
-			userDAO.create(CommonUtil.populateUserModelFromVO(user));
+			edu.tan.poc.smartms.model.User userModel = CommonUtil.populateUserModelFromVO(user);
+			userDAO.create(userModel);
+			user.setUserId(userModel.getUserId().toString());
 		} else {
 			log.error("Won't save null object.");
 		}

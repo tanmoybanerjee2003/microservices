@@ -4,6 +4,7 @@
 package edu.tan.poc.smartms.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 
@@ -24,6 +25,10 @@ public class MongoUserDAOImpl implements UserDAO {
 	
 	@Autowired
 	private UserMongoRepository userRepo;
+	
+	@Autowired
+	@Qualifier("mongoSequenceDAO")
+	private SequenceDAO sequenceDAO;
 	
 	@Override
 	public void create(User user) {
